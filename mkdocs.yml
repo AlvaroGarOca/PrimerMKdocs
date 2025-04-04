@@ -23,6 +23,7 @@ theme:
   features:
     - header.autohide
     - navigation.footer
+    - content.code.copy
   palette: 
 # Dark Mode
     - scheme: slate
