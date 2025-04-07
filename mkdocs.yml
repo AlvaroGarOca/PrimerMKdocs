@@ -6,10 +6,11 @@ nav:
     - Instalación: pages/instalacionMKdocs.md
   - AWS:
     - Uso: pages/usoAWS.md
-    - EC2:
-      - Instalación: pages/instalacionEC2.md
     - VPC:
-      - Instalación: pages/instalacionVPC.md
+      - Creación de VPC y subredes: pages/instalacionVPC.md
+    - EC2:
+      - Creación de EC2: pages/instalacionEC2.md
+
 theme:
   name: material
   language: es
@@ -27,9 +28,9 @@ theme:
       bug: octicons/bug-16
       example: octicons/beaker-16
       quote: octicons/quote-16
+    annotation: material/plus-circle
   features:
     - header.autohide
-    - navigation.footer
     - content.code.copy
   palette: 
 # Dark Mode
@@ -60,6 +61,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde 
   - admonition
   
 extra:
