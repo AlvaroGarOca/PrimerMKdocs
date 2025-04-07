@@ -28,7 +28,7 @@ Después nos encontramos con el tipo de instancia. Aquí debemos tener cuidado (
 
 A continuación, tenemos el par de claves...
 
-!!! Failure
+!!! Failure "Los pares de clave son... clave... :drum:ba dum tss:drum:"
 
     En la siguiente captura muestro lo que ==NO== hay que hacer. Si queremos usar una conexión SSH, necesitaremos un par de claves. Además, es mejor siempre crearlas por si acaso, ya que no sabemos cuando la podremos necesitar.
 

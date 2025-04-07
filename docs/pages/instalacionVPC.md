@@ -38,7 +38,7 @@ Después de asegurarnos que es la VPC correcta, si bajamos vemos la opción de c
 
 ![Imagen](../Recursos/VPC/VPCSubred2.png)
 
-!!! warning
+!!! warning "Cuidado con las CIDR"
 
     Asegurate de poner correctamente la IP de cada subred, esto es lo más importante. AWS te avisará solamente si hay un conflicto con la IP, pero asegúrate de ponerlas bien ya que puedes dejar menos IP por subred de las que deseas. A la hora de poner el bloque de CIDR de la subred, fíjate como a la derecha indica las IPs que ofrece la IP que has colocado.
 
@@ -48,7 +48,7 @@ Cuando crees todas las subredes, este será el resultado. Ya están listas las s
 
 ## Crear una puerta de enlace
 
-!!! info
+!!! info "Cuidado con el idioma"
 
     No confundir Puerta de enlace de internet con Gateway NAT. En la versión en castellano puede ser un poco confuso.
 

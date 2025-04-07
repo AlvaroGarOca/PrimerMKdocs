@@ -55,7 +55,7 @@ mkdocs-material-extensions==1.3.1
 pymdown-extensions==10.14.3pip
 ```
 
-!!! warning
+!!! warning "Atento/a a esto"
 
     Te habrás percatado de que en cada línea, además de incorporar qué se necesita, también pone su versión. Es mejor indicar la versión con la que va a trabajar el proyecto, así vamos a evitar posibles problemas de versiones más adelante con actualizaciones que tal vez no sean compatibles con alguna otra cosa.
 
@@ -70,7 +70,7 @@ Ya lo tenemos todo listo, así que ahora solo falta lanzar nuestro proyecto.
 mkdocs server -a localhost:8080
 ```
 
-!!! note
+!!! note "A tener en cuenta"
 
     En mi instalación, encontré un problema. Si instalas MKdocs en Windows, ya que yo estoy usando WSL para este proyecto, por defecto se lanza MKdocs en el puerto 8000, el cual Windows tiene capado para algún servicio. Así que, como he dicho arriba, es mejor usar el 8080 para evitar problemas y quebraderos de cabeza.
 

@@ -10,6 +10,7 @@ nav:
       - Creación de VPC y subredes: pages/instalacionVPC.md
     - EC2:
       - Creación de EC2: pages/instalacionEC2.md
+      - Instalación de Nginx: pages/Nginx.md
 
 theme:
   name: material
@@ -65,7 +66,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.keys
   - pymdownx.mark
-  - pymdownx.tilde 
+  - pymdownx.tilde
+  - pymdownx.details
   - admonition
   
 extra:
