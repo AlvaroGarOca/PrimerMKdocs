@@ -2,7 +2,14 @@ site_name: Documentación
 site_url: https://sitename.example
 nav:
   - MKdocs: 
+    - Uso: pages/usoMKdocs.md
     - Instalación: pages/instalacionMKdocs.md
+  - AWS:
+    - Uso: pages/usoAWS.md
+    - EC2:
+      - Instalación: pages/instalacionEC2.md
+    - VPC:
+      - Instalación: pages/instalacionVPC.md
 theme:
   name: material
   language: es

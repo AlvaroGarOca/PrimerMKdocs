@@ -11,5 +11,11 @@ Me llamo Álvaro García Ocaña, estoy acabando el Grado Superior de ASIR en el 
 Me gusta aprender y mejorar. En esta documentación, enseño todo lo que he ido aprendiendo durante mis prácticas en BaseTIS, y que espero poder aplicarlas también con ellos si es posible. :smiley:
 
 ## Herramientas usadas
+### MKdocs :simple-materialformkdocs:
 
+### Amazon Web Services :fontawesome-brands-aws:
+
+### Docker :simple-docker:
+
+### Terraform :simple-terraform:
 ## Funcionamiento de esta documentación
