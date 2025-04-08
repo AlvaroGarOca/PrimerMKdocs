@@ -10,3 +10,8 @@ pip install -r requirements.txt
 mkdocs server -a localhost:8080
 ```
 
+!!! note "Recuerda"
+    Para ver las versiones de lo que está instalado, usa:
+    ```bash
+    python3 -m pip freeze
+    ```
