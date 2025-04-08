@@ -1,4 +1,4 @@
-# Creación de una VPC y sus subredes :material-tools:
+# :material-tools: Creación de una VPC y sus subredes
 Con una VPC, podemos tener nuestra red virtual privada y las subredes que necesitemos dentro de ella. En AWS se pueden crear y podemos generar subredes en las zonas de disponibilidad que tenemos en cada región. 
 
 ## Cómo crear una VPC

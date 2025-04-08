@@ -1,6 +1,7 @@
 site_name: Documentación
 site_url: https://sitename.example
 nav:
+  - Inicio: index.md
   - MKdocs: 
     - Uso: pages/usoMKdocs.md
     - Instalación: pages/instalacionMKdocs.md
@@ -11,6 +12,7 @@ nav:
     - EC2:
       - Creación de EC2: pages/instalacionEC2.md
       - Instalación de Nginx: pages/Nginx.md
+      - Nginx en funcionamiento: pages/NginxFuncionamiento.md
 
 theme:
   name: material
@@ -70,6 +72,10 @@ markdown_extensions:
   - pymdownx.details
   - admonition
   
+plugins:
+   - glightbox
+
+
 extra:
   generator: false
   social:
