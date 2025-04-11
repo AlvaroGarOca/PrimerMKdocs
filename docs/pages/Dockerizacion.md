@@ -84,3 +84,16 @@ Ahora solo queda entrar a nuestro MKdocs a traves de localhost:8080
 ![Imagen](../Recursos/Docker/docker02.png)
 
 :material-party-popper::material-party-popper::material-party-popper:
+
+### Preguntas a responder
+
+#### ¿Qué te parece si desplegamos contenedores directamente en EC2 con "docker-compose"? ¿Le ves algún problema o deventaja?
+Lo veo una opción viable, pero no la mejor. Creo que sería mejor desplegar los contenedores en ECS, ya que es un servicio dedicado a ello y no sería tan "engorroso" como hacerlo a mano directamente en el EC2. Así que, lo veo posible, pero no la mejor opción.
+
+#### ¿Qué otras maneras consideras que podrían que se podrían emplear?
+Lo mencionado anteriormente, ECS creo que es la mejor opción para esto. Luego estaría EKS para usarlo con Kubernetes.
+
+#### Explica sensaciones respecto a Docker y cómo consideras que puede resultar útil en el día a día.
+He de reconocer que hasta ahora ha sido lo más complejo que he visto en el classroom. Me ha costado entender algunos conceptos como las capas, o la diferencia entre compose y el dockerfile. Pero ahora que tengo una visión algo más clara del tema, creo que es prácticamente esencial usar contenedores para desplegar servicios y programas. ¿Por qué se iba a instalar en una máquina EC2 por ejemplo los programas manualmente y sin saber si las versiones actuales funcionan bien? Ahora lo veo una pérdida de tiempo hacerlo a mano sabiendo que existe docker. 
+
+Lo veo rápido, cómodo y sencillo. Además de muy adaptable para según qué situación... poder crear tu propia imagen y luego desplegarla fácilmente en cualquier SO o máquina y que funcione al 100% es algo que hasta ahora solo creía posible con Vagrant. Con esto es mucho mejor.
