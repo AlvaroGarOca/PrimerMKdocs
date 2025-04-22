@@ -13,6 +13,8 @@ nav:
       - Creación de EC2: pages/instalacionEC2.md
       - Instalación de Nginx: pages/Nginx.md
       - Nginx en funcionamiento: pages/NginxFuncionamiento.md
+    - ECS:
+      - Creación de ECS: pages/creacionECS.md
   - Docker:
     - Dockerización de MKdocs: pages/Dockerizacion.md
 
