@@ -6,7 +6,7 @@ Para empezar, vamos a crear el clúster. Vamos a Amazon Elastic Container Servic
 
 ![Imagen](../Recursos/ECS/ECS0.png)
 
-Como he dicho anteriormente, queremos hacer un servicio serverless, así que vamos a usar AWS Fargate. Esto además tiene pago por usos, así que es perfecto para tener una web estática, que es lo que ofrece Nginx. Aquí, como se ve en el pantallazo, ponemos el nombre y además seleccionamos la infraestructura, Fargate.
+Como he dicho anteriormente, queremos hacer un servicio serverless, así que vamos a usar AWS Fargate. Esto además tiene pago por usos, aunque a diferencia de S3, no quiere decir que el uso sea por tráfico. Aquí, como se ve en el pantallazo, ponemos el nombre y además seleccionamos la infraestructura, Fargate.
 
 ![Imagen](../Recursos/ECS/ECS1.png)
 
