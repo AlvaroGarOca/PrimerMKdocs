@@ -15,6 +15,7 @@ nav:
       - Nginx en funcionamiento: pages/NginxFuncionamiento.md
     - ECS:
       - Creación de ECS: pages/creacionECS.md
+      - Conexión con RDS: pages/conexionecsrds.md
     - RDS:
       - Creación de RDS: pages/creacionRDS.md
   - Docker:
