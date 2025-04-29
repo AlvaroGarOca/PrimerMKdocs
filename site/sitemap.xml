@@ -2,30 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sitename.example/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/pages/Dockerizacion/</loc>
+         <lastmod>2025-04-29</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/pages/Nginx/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/pages/NginxFuncionamiento/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/pages/conexionecsrds/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/pages/creacionECS/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/pages/creacionRDS/</loc>
+         <lastmod>2025-04-29</lastmod>
+    </url>
+    <url>
+         <loc>https://sitename.example/pages/desplegarWP/</loc>
+         <lastmod>2025-04-29</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/pages/instalacionEC2/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/pages/instalacionMKdocs/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/pages/instalacionVPC/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/pages/usoAWS/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
     </url>
     <url>
          <loc>https://sitename.example/pages/usoMKdocs/</loc>
-         <lastmod>2025-04-08</lastmod>
+         <lastmod>2025-04-29</lastmod>
     </url>
 </urlset>

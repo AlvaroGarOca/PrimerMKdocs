@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/pages/Nginx/">
+        <link rel="canonical" href="https://sitename.example/pages/conexionecsrds/">
       
       
-        <link rel="prev" href="../instalacionEC2/">
+        <link rel="prev" href="../creacionECS/">
       
       
-        <link rel="next" href="../NginxFuncionamiento/">
+        <link rel="next" href="../desplegarWP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Instalación de Nginx - Documentación</title>
+        <title>Conexión con RDS - Documentación</title>
       
     
     
@@ -130,7 +130,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-de-nginx-en-la-maquina-ec2" class="md-skip">
+        <a href="#conexion-con-rds" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -166,7 +166,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalación de Nginx
+              Conexión con RDS
             
           </span>
         </div>
@@ -490,20 +490,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -519,7 +517,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             EC2
@@ -553,19 +551,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Nginx/" class="md-nav__link">
         
   
   
@@ -576,7 +565,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -617,18 +605,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -644,7 +634,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -678,10 +668,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../conexionecsrds/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -692,6 +691,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -906,57 +906,23 @@
 
 
 
-<h1 id="instalacion-de-nginx-en-la-maquina-ec2">Instalación de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0 1.605 6v12L12 24l10.395-6V6zm6 16.59c0 .705-.646 1.29-1.529 1.29-.631 0-1.351-.255-1.801-.81l-6-7.141v6.66c0 .721-.57 1.29-1.274 1.29H7.32c-.721 0-1.29-.6-1.29-1.29V7.41c0-.705.63-1.29 1.5-1.29.646 0 1.38.255 1.83.81l5.97 7.141V7.41c0-.721.6-1.29 1.29-1.29h.075c.72 0 1.29.6 1.29 1.29v9.18z"/></svg></span> Nginx en la máquina EC2</h1>
-<p>Ya tenemos nuestra máquina funcionando, ahora necesitamos un servicio instalado en ella. Para este ejemplo, siguiendo los ejercicios de mi tutor, vamos a instalar un Nginx en la máquina que creamos <a href="../instalacionEC2/">anteriormente</a>.</p>
-<p>A través de SSH, tenemos que hacer una serie de comandos para llevar a cabo la instalación. Al igual que otros muchos programas o servicios, esto se hace de la misma manera, teniendo en cuenta que es un Amazon Linux 2. Teniendo en cuenta que ya estamos conectados a nuestra máquina, vamos a comprobar si está disponible para instalar directamente en la máquina.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx1.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>nginx
-</span></code></pre></div>
+<h1 id="conexion-con-rds">Conexión con RDS</h1>
+<p>Para esta práctica, tengo el RDS que <a href="../creacionRDS/">hicimos aquí</a>, con el clúster que hicimos <a href="../creacionECS/">en el paso anterior</a>.</p>
+<p>Para esto, y aprovechando las configuraciones que hicimos en el RDS cuando lo creamos, creamos una definición de tarea nueva con una imagen de Wordpress.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/wp1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/wp1.png" /></a></p>
+<p>Un poco más abajo, vamos a usar una parte que no hemos visto, que son las variables de entorno. Aquí se pueden integrar variables que usará la imagen automáticamente para configurarse. En este caso, lo usamos para decirle a Wordpress el nombre de la base de datos, el host (que es el RDS), el usuario y la contraseña. </p>
+<p><a class="glightbox" href="../../Recursos/ECS/wp2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/wp2.png" /></a></p>
+<details class="note">
+<summary>Recuerda</summary>
+<p>En la configuración de redes, hay que incorporar la tarea a la VPC que nos interesa. Además, está bien crearle un grupo de seguridad independiente para evitar mezclarlo con otras cosas. No sé si es la mejor práctica, pero yo me estoy aclarando mejor así</p>
 </details>
-<p>Vemos que está disponible, así que vamos a habilitarlo para poder iniciar con la instalación. </p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx2.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx1
-</span></code></pre></div>
-</details>
-<p>El comando nos indicará al final qué pasos debemos seguir una vez hecho esto. Lo primero que nos indica es que debemos hacer una limpieza de metadatos de los repositorios para instalar Nginx. Así que ejecutamos este comando:</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx3.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>clean<span class="w"> </span>metadata
-</span></code></pre></div>
-</details>
-<p>Ahora que tenemos el terreno listo y preparado, vamos a instalar Nginx. Muy sencillo, usamos el repositorio yum también para instalarlo con el siguiente comando:</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx4.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Al final veremos lo instalado, tanto Nginx como sus dependencias.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx5.png" /></a></p>
-<p>Para asegurarnos, vamos a hacer una serie de comandos, ya que lo normal es que tras una instalación no se active por si solo un servicio. Hacemos por orden los comandos mostrados en la captura.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx6.png" /></a></p>
-<details class="example">
-<summary>Comandos</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Y con esto está instalado y preparado. Pero la máquina aún necesita algo más, ya que viene configurado con su firewall para evitar que se conecten directamente. Para hacer una excepción, añadimos una iptable nueva donde aceptaremos conexiones HTTP por el puerto 80.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx7.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
-</span></code></pre></div>
-</details>
-<p>Y ahora sí, ya podemos usar nuestro Nginx. Para comprobar que la conexión a la máquina va bien, vamos a nuestro navegador y conectamos por HTTP a la máquina, introduciendo su IP pública.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx8.png" /></a></p>
-<p>¡Hecho!</p>
+<p>En el grupo de seguridad que esté para la tarea, debemos asegurarnos que como regla de salida está puesto para todo el tráfico posible, así podrá conectar con RDS sin problemas. En cuanto al grupo de seguridad de RDS, todo lo contrario, como regla de entrada debemos especificar el grupo de seguridad de la tarea, así podrá conectar exclusivamente el Wordpress que se levanta en el ECS.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/wp4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/wp4.png" /></a></p>
+<p>Con esto ya está listo. Si entramos a la IP pública del contenedor, vemos que efectivamente se ha levantado el wordpress.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/wp5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/wp5.png" /></a></p>
+<p>Pero esto no significa que de verdad esté conectado a la base de datos, ya que nos muestra la instalación y nada más. Para asegurarme de que está conectado a la base de datos de RDS, conectamos desde EC2 a la base de datos como ya hicimos en la creación de RDS. La base de datos estaba vacía, pero si entramos desde MySQL a la base de datos y comprobamos la tabla...</p>
+<p><a class="glightbox" href="../../Recursos/ECS/wp6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/wp6.png" /></a></p>
+<p>Se muestran las tablas que crea automáticamente Wordpress tras la instalación, así que está todo correcto.</p>
 
 
 

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/pages/Nginx/">
+        <link rel="canonical" href="https://sitename.example/pages/creacionECS/">
       
       
-        <link rel="prev" href="../instalacionEC2/">
+        <link rel="prev" href="../NginxFuncionamiento/">
       
       
-        <link rel="next" href="../NginxFuncionamiento/">
+        <link rel="next" href="../conexionecsrds/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Instalación de Nginx - Documentación</title>
+        <title>Creación de ECS - Documentación</title>
       
     
     
@@ -130,7 +130,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-de-nginx-en-la-maquina-ec2" class="md-skip">
+        <a href="#creacion-de-ecs-con-fargate" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -166,7 +166,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalación de Nginx
+              Creación de ECS
             
           </span>
         </div>
@@ -490,20 +490,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -519,7 +517,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             EC2
@@ -553,19 +551,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Nginx/" class="md-nav__link">
         
   
   
@@ -576,7 +565,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -617,18 +605,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -644,7 +634,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             ECS
@@ -655,10 +645,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../creacionECS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Creación de ECS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -669,6 +681,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-el-cluster-de-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear el clúster de ECS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-tarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de tarea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación del servicio
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -892,6 +951,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crear-el-cluster-de-ecs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear el clúster de ECS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definicion-de-tarea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definición de tarea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-del-servicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación del servicio
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -906,57 +1000,48 @@
 
 
 
-<h1 id="instalacion-de-nginx-en-la-maquina-ec2">Instalación de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0 1.605 6v12L12 24l10.395-6V6zm6 16.59c0 .705-.646 1.29-1.529 1.29-.631 0-1.351-.255-1.801-.81l-6-7.141v6.66c0 .721-.57 1.29-1.274 1.29H7.32c-.721 0-1.29-.6-1.29-1.29V7.41c0-.705.63-1.29 1.5-1.29.646 0 1.38.255 1.83.81l5.97 7.141V7.41c0-.721.6-1.29 1.29-1.29h.075c.72 0 1.29.6 1.29 1.29v9.18z"/></svg></span> Nginx en la máquina EC2</h1>
-<p>Ya tenemos nuestra máquina funcionando, ahora necesitamos un servicio instalado en ella. Para este ejemplo, siguiendo los ejercicios de mi tutor, vamos a instalar un Nginx en la máquina que creamos <a href="../instalacionEC2/">anteriormente</a>.</p>
-<p>A través de SSH, tenemos que hacer una serie de comandos para llevar a cabo la instalación. Al igual que otros muchos programas o servicios, esto se hace de la misma manera, teniendo en cuenta que es un Amazon Linux 2. Teniendo en cuenta que ya estamos conectados a nuestra máquina, vamos a comprobar si está disponible para instalar directamente en la máquina.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx1.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Vemos que está disponible, así que vamos a habilitarlo para poder iniciar con la instalación. </p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx2.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx1
-</span></code></pre></div>
-</details>
-<p>El comando nos indicará al final qué pasos debemos seguir una vez hecho esto. Lo primero que nos indica es que debemos hacer una limpieza de metadatos de los repositorios para instalar Nginx. Así que ejecutamos este comando:</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx3.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>clean<span class="w"> </span>metadata
-</span></code></pre></div>
-</details>
-<p>Ahora que tenemos el terreno listo y preparado, vamos a instalar Nginx. Muy sencillo, usamos el repositorio yum también para instalarlo con el siguiente comando:</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx4.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Al final veremos lo instalado, tanto Nginx como sus dependencias.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx5.png" /></a></p>
-<p>Para asegurarnos, vamos a hacer una serie de comandos, ya que lo normal es que tras una instalación no se active por si solo un servicio. Hacemos por orden los comandos mostrados en la captura.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx6.png" /></a></p>
-<details class="example">
-<summary>Comandos</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Y con esto está instalado y preparado. Pero la máquina aún necesita algo más, ya que viene configurado con su firewall para evitar que se conecten directamente. Para hacer una excepción, añadimos una iptable nueva donde aceptaremos conexiones HTTP por el puerto 80.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx7.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
-</span></code></pre></div>
-</details>
-<p>Y ahora sí, ya podemos usar nuestro Nginx. Para comprobar que la conexión a la máquina va bien, vamos a nuestro navegador y conectamos por HTTP a la máquina, introduciendo su IP pública.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx8.png" /></a></p>
-<p>¡Hecho!</p>
+<h1 id="creacion-de-ecs-con-fargate">Creación de ECS con Fargate</h1>
+<p>Con ECS, podemos tener contenedores docker en la nube y desplegarlos fácilmente sin la necesidad de tener que administrar un servidores que los aloje, ya que usaremos Fargate para esto. En este ejemplo, vamos a desplegar una imagen docker de Nginx en ECS, y accederemos a él a través de una IP pública. </p>
+<h3 id="crear-el-cluster-de-ecs">Crear el clúster de ECS</h3>
+<p>Para empezar, vamos a crear el clúster. Vamos a Amazon Elastic Container Service (ECS) y le damos a crear clúster.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS0.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS0.png" /></a></p>
+<p>Como he dicho anteriormente, queremos hacer un servicio serverless, así que vamos a usar AWS Fargate. Esto además tiene pago por usos, aunque a diferencia de S3, no quiere decir que el uso sea por tráfico. Aquí, como se ve en el pantallazo, ponemos el nombre y además seleccionamos la infraestructura, Fargate.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS1.png" /></a></p>
+<p>La creación del clúster tiene muchas más opciones. Pero por ahora, esto es todo lo que vamos a tocar. Le damos a crear y veremos que nos aparece esto en pantalla:</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS2.png" /></a></p>
+<p>No tardará demasiado en crearse, pero con esto, ya tenemos el clúster hecho.</p>
+<h3 id="definicion-de-tarea">Definición de tarea</h3>
+<p>Bien, tenemos el clúster de ECS, pero ahora necesitamos las instrucciones. En la definiciones de tareas, es donde le vamos a decir qué queremos exactamente. Vamos a especificarle que queremos un contenedor docker de Nginx, donde ya está todo preconfigurado, así que usaremos la imagen oficial.</p>
+<p>Para empezar, en el menú lateral de ECS, le damos a definiciones de tareas y creamos una nueva. Ahí, le ponemos el nombre...</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS3.png" /></a></p>
+<p>En los requisitos de infraestructura, recordamos que hemos marcado AWS Fargate, así que nos mantenemos así en tipo de lanzamiento. Esto usará su sistema operativo, su CPU, memoria... como si fuese una máquina virtual, pero no podremos crear una configuración de esta, ya que será exclusivamente usada para el servicio que le vamos a asignar. Avanzamos.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS4.png" /></a></p>
+<p>En roles de tarea, lo vamos a dejar por defecto. No lo vamos a usar, pero con estos roles podemos crear un rol en IAM y asignárselo a la tarea. Por ejemplo podríamos usar esto para crear un rol específico en el que la tarea además de levantar el Nginx, se conecte a una base de datos. El rol de ejecución de tareas, lo dejamos tal y como está, ya que es el rol para ejecutar la tarea de manera predeterminada.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS5.png" /></a></p>
+<p>Ahora viene lo más importante de todo, el contenedor. Como se ve en la captura de más abajo, vamos a ponerle un nombre y también especificamos la imagen. Tenemos que buscar una en concreto, o crearla y subirla a docker hub. Yo aquí he usado la oficial de Nginx, en su última versión, para asegurarme de que funciona bien. Abajo se ve el puerto por el que trabaja, como es un Nginx y trabaja por el puerto 80, lo dejamos como muestro. El resto de opciones, no nos interesa por ahora. </p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS6.png" /></a></p>
+<p>Por último, le ponemos la etiqueta que queramos para identificarla, aunque no es esencial. Y le damos a crear. Ya tenemos nuestra tarea definida y lista para usarla.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS7.png" /></a></p>
+<h3 id="creacion-del-servicio">Creación del servicio</h3>
+<p>Ahora que tenemos las instrucciones de ejecución, necesitamos saber la metodología para aplicarlas, ¿cuando queremos ejecutar estas instrucciones? Para eso sirve el servicio. Para crearlo, seleccionamos nuestro clúster, y en la pestaña de servicios le damos a crear.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS8.png" /></a></p>
+<p>Como ya tenemos el clúster seleccionado, no nos dejará cambiarlo. En la configuración informática, para este caso más simple, vamos a elegir "Tipo de lanzamiento". La estrategia sirve para distribuir las tareas entre varios proveedores, nos puede interesar para evitar que por ejemplo una web se caiga si hay demasiadas visitas al mismo tiempo. Dejamos el resto de opciones por defecto, ya que como sabemos, usamos Fargate.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS9.png" /></a></p>
+<p>En configuración de implementación, tenemos que seleccionar la familia de definición de tareas, que es lo que hemos hecho en el paso anterior. La revisión de definición es que siempre usará la versión más reciente de las tareas que hemos creado, en el caso de que haya modificaciones.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS10.png" /></a></p>
+<p>En la siguiente parte, no vamos a cambiar nada. El tipo de servicio es el único que nos deja por ahora, que es una réplica, creará réplicas exactas, tantas como necesite. En nuestro caso, creará una tarea porque es lo que le especificamos, no nos hace falta más. Se puede reequilibrar las tareas en todas las zonas de disponibilidad, dependiendo de la configuración de nuestra VPC. El periodo de gracia es una opción en la que podemos asignarle un tiempo de gracia a un servicio que da un error, y que en ese tiempo, se arregle o se levante automáticamente por él mismo. Si lo dejamos a cero, no le concederá nada de tiempo y detendrá la tarea al instante al ser detectado el error o problema.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS11.png" /></a></p>
+<p>Por último, las redes. Seleccionamos la VPC, en mi caso uso la que cree en <a href="../instalacionVPC/">pasos anteriores</a>. Podemos seleccionar cuantas subredes usar, yo lo he dejado con todas, aunque no creo que sea realmente lo más eficiente. Además, usaremos un grupo de seguridad que hemos creado especificamente para esto, uno que permite la entrada por HTTP y HTTPS. Y por supuesto, activamos la IP pública para poder acceder a Nginx desde nuestro navegador.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS12.png" /></a></p>
+<p>Tras configurarlo todo, le damos a crear...</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS13.png" /></a></p>
+<p>Y vemos como en nuestro clúster aparece una parte de tareas, donde nos aparecerá que hay una pendiente.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS14.png" /></a></p>
+<p>En cuestión de segundos, deberíamos ver como pasa de pendiente a en ejecución.</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS15.png" /></a></p>
+<p>Y si está en ejecución, deberíamos poder acceder a Nginx a través del navegador por su IP pública:</p>
+<p><a class="glightbox" href="../../Recursos/ECS/ECS16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/ECS/ECS16.png" /></a></p>
+<p>¡Listo! Ya tenemos nuestro Nginx dockerizado funcionando de manera pública, de manera serverless, a través de AWS.</p>
 
 
 

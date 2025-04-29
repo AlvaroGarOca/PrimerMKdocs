@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://sitename.example/pages/Nginx/">
+        <link rel="canonical" href="https://sitename.example/pages/creacionRDS/">
       
       
-        <link rel="prev" href="../instalacionEC2/">
+        <link rel="prev" href="../desplegarWP/">
       
       
-        <link rel="next" href="../NginxFuncionamiento/">
+        <link rel="next" href="../Dockerizacion/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Instalación de Nginx - Documentación</title>
+        <title>Creación de RDS - Documentación</title>
       
     
     
@@ -130,7 +130,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacion-de-nginx-en-la-maquina-ec2" class="md-skip">
+        <a href="#creacion-de-rds-y-conexion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -166,7 +166,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Instalación de Nginx
+              Creación de RDS
             
           </span>
         </div>
@@ -490,20 +490,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -519,7 +517,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             EC2
@@ -553,19 +551,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Nginx/" class="md-nav__link">
         
   
   
@@ -576,7 +565,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -732,18 +720,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
@@ -759,7 +749,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             RDS
@@ -770,10 +760,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../creacionRDS/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Creación de RDS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -784,6 +796,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-el-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando el RDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectando-un-ec2-a-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectando un EC2 a RDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-a-rds-desde-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accediendo a RDS desde EC2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -892,6 +951,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creando-el-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creando el RDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conectando-un-ec2-a-rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conectando un EC2 a RDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accediendo-a-rds-desde-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accediendo a RDS desde EC2
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -906,57 +1000,54 @@
 
 
 
-<h1 id="instalacion-de-nginx-en-la-maquina-ec2">Instalación de <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0 1.605 6v12L12 24l10.395-6V6zm6 16.59c0 .705-.646 1.29-1.529 1.29-.631 0-1.351-.255-1.801-.81l-6-7.141v6.66c0 .721-.57 1.29-1.274 1.29H7.32c-.721 0-1.29-.6-1.29-1.29V7.41c0-.705.63-1.29 1.5-1.29.646 0 1.38.255 1.83.81l5.97 7.141V7.41c0-.721.6-1.29 1.29-1.29h.075c.72 0 1.29.6 1.29 1.29v9.18z"/></svg></span> Nginx en la máquina EC2</h1>
-<p>Ya tenemos nuestra máquina funcionando, ahora necesitamos un servicio instalado en ella. Para este ejemplo, siguiendo los ejercicios de mi tutor, vamos a instalar un Nginx en la máquina que creamos <a href="../instalacionEC2/">anteriormente</a>.</p>
-<p>A través de SSH, tenemos que hacer una serie de comandos para llevar a cabo la instalación. Al igual que otros muchos programas o servicios, esto se hace de la misma manera, teniendo en cuenta que es un Amazon Linux 2. Teniendo en cuenta que ya estamos conectados a nuestra máquina, vamos a comprobar si está disponible para instalar directamente en la máquina.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx1.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span>list<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Vemos que está disponible, así que vamos a habilitarlo para poder iniciar con la instalación. </p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx2.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>amazon-linux-extras<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx1
-</span></code></pre></div>
-</details>
-<p>El comando nos indicará al final qué pasos debemos seguir una vez hecho esto. Lo primero que nos indica es que debemos hacer una limpieza de metadatos de los repositorios para instalar Nginx. Así que ejecutamos este comando:</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx3.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>clean<span class="w"> </span>metadata
-</span></code></pre></div>
-</details>
-<p>Ahora que tenemos el terreno listo y preparado, vamos a instalar Nginx. Muy sencillo, usamos el repositorio yum también para instalarlo con el siguiente comando:</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx4.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Al final veremos lo instalado, tanto Nginx como sus dependencias.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx5.png" /></a></p>
-<p>Para asegurarnos, vamos a hacer una serie de comandos, ya que lo normal es que tras una instalación no se active por si solo un servicio. Hacemos por orden los comandos mostrados en la captura.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx6.png" /></a></p>
-<details class="example">
-<summary>Comandos</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>nginx
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nginx
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>nginx
-</span></code></pre></div>
-</details>
-<p>Y con esto está instalado y preparado. Pero la máquina aún necesita algo más, ya que viene configurado con su firewall para evitar que se conecten directamente. Para hacer una excepción, añadimos una iptable nueva donde aceptaremos conexiones HTTP por el puerto 80.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx7.png" /></a></p>
-<details class="example">
-<summary>Comando</summary>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>iptables<span class="w"> </span>-I<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">80</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT
-</span></code></pre></div>
-</details>
-<p>Y ahora sí, ya podemos usar nuestro Nginx. Para comprobar que la conexión a la máquina va bien, vamos a nuestro navegador y conectamos por HTTP a la máquina, introduciendo su IP pública.</p>
-<p><a class="glightbox" href="../../Recursos/EC2/Nginx8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/EC2/Nginx8.png" /></a></p>
-<p>¡Hecho!</p>
+<h1 id="creacion-de-rds-y-conexion">Creación de RDS y conexión</h1>
+<p>Con RDS podemos tener una base de datos y conectarla a diferentes servicios de AWS directamente. Para esta práctica, creamos un RDS con MySQL, con seguridad en la autenticación y además conectamos a ella un EC2 para comprobar la conexión.</p>
+<h3 id="creando-el-rds">Creando el RDS</h3>
+<p>En AWS, vamos a usar "Aurora and RDS" para esta base de datos. Accedemos a la sección mencionada y le damos a crear base de datos. </p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS1.png" /></a></p>
+<p>Los primeros pasos nos dan a elegir si queremos una creación estándar o sencilla. Como queremos cambiar algunas cosas en la seguridad de la base de datos, vamos a elegir la estándar. En opciones del motor, es a elección y necesidad, para este caso vamos a usar MYSQL.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS2.png" /></a></p>
+<p>Podemos elegir el tipo de plantilla que se adapta según el uso, para producción, desarrollo... en esta práctica no nos interesa nada de eso, pero está bien saber que existe. Elegimos la capa gratuita y solo nos dará una opción en disponibilidad y durabilidad al seleccionar esta capa. Esto es básicamente que se creará una sola instancia principal y no se tendrá en cuenta ni redundancia de datos, ni puntos de conexión en otras zonas disponibles. Es la más básica.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS3.png" /></a></p>
+<p>Le indicamos un nombre a la instancia. Lo siguiente son las credenciales, donde debemos poner un nombre de usuario maestro, aquí lo he dejado en "admin" ya que es una de prueba pero no es la mejor práctica en términos de seguridad. En la administración de credenciales, vamos a usar AWS Secrets Manager. Es un servicio que proporciona AWS, que gestiona las contraseñas y los usuarios en forma de "secretos", ya que genera las contraseñas de manera automática y se van generando nuevas contraseñas según se configure el secret manager. La clave de cifrado que escogemos es la predeterminada.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS4.png" /></a></p>
+<p>La configuración de la instancia siempre se ciñe a nuestras necesidades. En este caso, escogí la más pequeña y más barata de todas.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS5.png" /></a></p>
+<p>El tipo de almacenamiento más de lo mismo que con el caso anterior. Lo dejé por defecto, ya que realmente no vamos a llenar esta base de datos.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS6.png" /></a></p>
+<p>Por ahora, no vamos a especificar la conexión a un EC2, ya que eso lo haremos más adelante. El tipo de red elegido es IPv4, aunque con modo de pila doble además de IPv4, se podría usar IPv6 también. Seleccionamos la VPC que tenemos creada, teniendo en cuenta que no podremos cambiarle el VPC una vez creada. Ya que estará en un VPC y haremos la conexión desde un EC2 que estará también en esa misma red, no queremos que tenga acceso público. </p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS7.png" /></a></p>
+<p>Le vamos a crear un nuevo grupo de seguridad, aunque realmente podríamos elegir uno existente. Para este caso, prefiero tenerlo separado de lo demás.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS8.png" /></a></p>
+<p>Configuraciones adicionales, como el nombre. El grupo de parámentros de base de datos solo podremos usar el que viene por defecto, ya que no hay más opciones.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS9.png" /></a></p>
+<p>Le damos a crear cuando nos hemos asegurado de que tenemos todo correctamente. Veremos que nos llevará atrás y arriba nos saldrá el aviso de que se está creando. </p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS10.png" /></a></p>
+<p>Si vamos al grupo de seguridad que se ha creado junto a la base de datos, podemos ver que se ha establecido directamente una regla de entrada en la que se puede acceder a la base de datos directamente desde nuestra IP personal. Aun así, como hemos visto en la creación del RDS, vamos a acceder a esta desde un EC2 que estará en el mismo VPC.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS11.png" /></a></p>
+<h3 id="conectando-un-ec2-a-rds">Conectando un EC2 a RDS</h3>
+<p>Es muy sencillo y prácticamente lo hace todo AWS por ti. Tenemos que tener un EC2 listo, como ya vimos <a href="../instalacionEC2/">anteriormente</a>. Si vamos a la pestaña de "Conectividad y seguridad" de nuestro RDS, más abajo veremos la opción de recursos de computación conectados, que habrá ninguno. Le damos a configurar conexión de EC2.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS12.png" /></a></p>
+<p>Aquí, seleccionaremos directamente el EC2 que queremos conectar.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS13.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS13.png" /></a></p>
+<p>Se nos muestra qué es realmente lo que hará AWS para la conexión. Vemos que le va a crear un grupo de seguridad para el RDS y otro para el EC2. Dentro de estos nuevos grupos de seguridad, habrá una regla, en la que en el EC2 será de salida hacia el RDS, y en el RDS será de entrada para el EC2. </p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS14.png" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Recuerda</p>
+<p>Para el EC2 debes poder conectar por SSH desde tu IP personal, así que debe estar así establecido en el grupo de seguridad de tu EC2. Esto es un error que yo mismo cometí, ya que olvidé establecerle una IP pública en este paso. La VPC a su vez debe tener una puerta de enlace para conectar con internet, si es totalmente interna no se podrá acceder tampoco a la EC2.</p>
+</div>
+<h3 id="accediendo-a-rds-desde-ec2">Accediendo a RDS desde EC2</h3>
+<p>Ya tenemos conectado al EC2, pero antes de avanzar queremos saber cual será la contraseña de nuestro RDS, ya que ahora mismo no lo sabemos. Para esto, tenemos que ir a AWS Secrets Manager, que es el servicio que gestiona nuestras credenciales. Dentro, veremos la sección de secretos, donde nos saldrá nuestro secreto.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS15.png" /></a></p>
+<p>Después de acceder a nuestro secreto, veremos detalles de este. Más abajo, en la descripción general vemos la sección "valor del secreto", aquí es donde se muestran las credenciales que almacenamos. Si queremos verlas, le damos a recuperar valor del secreto y se nos mostrarán las credenciales. En este caso, el usuario que pusimos en la creación RDS y su contraseña.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS16.png" /></a>
+<a class="glightbox" href="../../Recursos/RDS/RDS17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS17.png" /></a></p>
+<p>Ahora podemos conectar a RDS desde nuestro EC2. Estando ya en el EC2 a través de SSH, conectamos al servidor con el primer comando que se ve en la captura. Nos pedirá la contraseña que copiamos desde el Secrets Manager y conectamos con RDS. </p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS18.png" /></a></p>
+<p>Para comprobar que estamos conectados y realmente es funcional, podemos hacer un par de cosas. Aquí aproveché para crear un usuario que usaremos más adelante para conectar la base de datos con un ECS que contendrá un Wordpress.</p>
+<p><a class="glightbox" href="../../Recursos/RDS/RDS19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS19.png" /></a>
+<a class="glightbox" href="../../Recursos/RDS/RDS20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Imagen" src="../../Recursos/RDS/RDS20.png" /></a></p>
+<p>Pero lo más importante es que ya tenemos nuestro RDS funcional, en su VPC, conectado a un EC2 y solo accesible por este. </p>
 
 
 
