@@ -16,6 +16,7 @@ nav:
     - ECS:
       - Creación de ECS: pages/creacionECS.md
       - Conexión con RDS: pages/conexionecsrds.md
+      - Desplegar Wordpress: pages/desplegarWP.md
     - RDS:
       - Creación de RDS: pages/creacionRDS.md
   - Docker:
