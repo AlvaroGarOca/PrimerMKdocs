@@ -155,3 +155,18 @@ Este comando es muy sencillo. Ya tenemos instaladas las dependencias, así que a
 Por último, subirá el site a nuestro bucket S3. Usará una acción de "jakejarvis", esta es una acción que he encontrado en el workshop de actions. Como se puede ver, simplemente hay que pasarle todas las variables que tenemos, o casi todas. Usa todas las variables de nuestro secrets, que además de las credenciales también le decimos el bucket al que queremos que se suba de esa cuenta. Por último la región y ya, el source_dir, es decir el site, nuestra web compilada.
 
 ### Comprobación
+Ahora solo falta comprobar si de verdad todo esto funciona. Para comprobarlo, debemos recordar como se inicia la acción, con un push en la rama main, así que eso es lo que hacemos. Una vez hecho, si vamos inmediatamente a la sección de acciones del repositorio, veremos que aparece en el workflow el commit que acabamos de hacer. Con un punto naranja a la izquierda quiere decir que está "en cola".
+
+![Imagen](../Recursos/Others/Actions3.png)
+
+Si entramos ahí, podemos ver cómo se va ejecutando en el runner paso a paso que le hemos dicho en el yml. Es muy útil verlo para ver si todo funciona correctamente, y si hay algún error, nos lo dirá aquí directamente. El error que pueda aparecer, será en el paso exacto, así que será fácil identificarlo. En este caso, parece que todo va bien:
+
+![Imagen](../Recursos/Others/Actions4.png)
+
+No tardará mucho, pero en esa misma página veremos que el job está hecho y el workflow ha ido correctamente. Si vamos atrás, ahora veremos que el commit sale con un tick azul como que todo ha salido bien y se han completado todos los pasos del job.
+
+![Imagen](../Recursos/Others/Actions5.png)
+
+Ahora solo queda acceder a nuestra URL pública de nuestro S3, y ver los cambios que se han hecho en la web pública.
+
+![Imagen](../Recursos/Others/Actions6.png)
