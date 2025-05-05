@@ -61,8 +61,8 @@ jobs:
         # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
         python-version: ${{ env.PYTHON_VERSION }}
 
-    - run: python3 -m pip install -r requirements.txt
-    - run: python3 -m mkdocks build
+    - run: pip install -r requirements.txt
+    - run: mkdocks build
     - uses: jakejarvis/s3-sync-action@master
       #with:
         #args: --acl public-read --follow-symlinks --delete
