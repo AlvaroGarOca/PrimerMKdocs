@@ -1,4 +1,4 @@
-# Creación de un bucket S3, y desplegar web estática en este
+# Creación de un bucket S3, y desplegar web estática
 Con S3 podemos tener archivos guardados en lo que se conoce como un "bucket", al que otros servicios de AWS pueden acceder para usarlos y así evitar el uso de espacio en discos, teniéndolo siempre disponible pero ahorrando espacio al mismo tiempo. Una de las opciones que tenemos con S3, es poder desplegar una web estática al subir sus contenidos al bucket. 
 
 ### Creando el bucket
