@@ -23,6 +23,7 @@ nav:
       - Página estática en S3: pages/paginaestaticas3.md
   - Docker:
     - Dockerización de MKdocs: pages/Dockerizacion.md
+  - GitHub Actions: pages/GitHubActions.md
 
 theme:
   name: material
