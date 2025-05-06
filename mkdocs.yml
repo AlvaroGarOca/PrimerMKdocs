@@ -21,6 +21,7 @@ nav:
       - Creación de RDS: pages/creacionRDS.md
     - S3:
       - Página estática en S3: pages/paginaestaticas3.md
+      - Cloudfront y ACM: pages/Cloudfront.md
   - Docker:
     - Dockerización de MKdocs: pages/Dockerizacion.md
   - GitHub Actions: pages/GitHubActions.md
