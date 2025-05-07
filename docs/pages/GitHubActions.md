@@ -170,3 +170,20 @@ No tardará mucho, pero en esa misma página veremos que el job está hecho y el
 Ahora solo queda acceder a nuestra URL pública de nuestro S3, y ver los cambios que se han hecho en la web pública.
 
 ![Imagen](../Recursos/Others/Actions6.png)
+
+Y ya está, ahora cada vez que hagamos un push a nuestro repositorio, la página web que está en internet se actualizará en cuestión de segundos con el nuevo contenido.
+
+### Extra: Actualizar pipeline para CloudFront
+Si tenemos un CloudFront en nuestro S3, [tal y como hemos hecho aquí](Cloudfront.md), vamos a necesitar tenerlo en cuenta. CloudFront sirve como caché, así que todo lo que se use se guardará en CloudFront para no tener que estar haciendo peticiones constantemente al bucket S3, lo que mejora el rendimiento y la seguridad. Pero entonces, cuando nosotros hagamos un push y se actualice el contenido del S3, es posible que se tarde demasiado o que ni siquiera se actualice la web para algunos clientes, ya que toda la web está cacheada y no es necesario hacer peticiones a S3. Para solventar este problema, lo que haremos será borrar el caché entero de nuestro CloudFront cada vez que se agreguen nuevos contenidos a la página web. 
+
+Para ello, es muy sencillo. Tenemos que añadir una nueva variable, que es el ID de nuestro CloudFront.
+
+![Imagen](../Recursos/CF/ssl8.png)
+
+Y por último, vamos a hacer un run del siguiente comando del CLI de AWS. Este comando lo que hace es indicarle a nuestra distribución que se limpiarán todos los datos desde el raíz y que empezará a cachear después de esta limpieza. 
+
+![Imagen](../Recursos/CF/ssl9.png)
+
+Si vamos a nuestra distribución, en la pestaña de "Invalidations" veremos que ha salido un registro nuevo después de ejecutar la pipeline del actions. Como se puede ver, además de la fecha y de que se ha completado, se ve el "Object paths", que básicamente nos indica que borra todo desde el raíz (/*). Con esto, está arreglado el problema y nuestro automatismo irá perfectamente de nuevo.
+
+![Imagen](../Recursos/CF/ssl10.png)

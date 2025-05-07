@@ -107,4 +107,20 @@ Ahora si entramos desde el enlace del propio cloudfront, vamos a ver si de verda
 
 ![Imagen](../Recursos/CF/ssl6.png)
 
-En la URL, vemos que aparece el candado y que el certificado es válido, así que efectivamente funciona el HTTPS, ya que además entrando al enlace directamente ha pasado de HTTP a HTTPS. Ahora solo quedaría entrar con el FQDN que le hemos asignado (En mi caso, convenio-docs.data.pre.basetis.com)...
+En la URL, vemos que aparece el candado y que el certificado es válido, así que efectivamente funciona el HTTPS, ya que además entrando al enlace directamente ha pasado de HTTP a HTTPS. Ahora solo quedaría entrar con el FQDN que le hemos asignado (En mi caso, convenio-docs.data.pre.basetis.com). Para hacer esto, tenemos que hacer algo más, que es añadir un registro A en el DNS, ya que por ahora solo tenemos un alias del certificado, pero ahora falta indicarle donde están los recursos al DNS.
+
+Vamos a nuestro Route 53 y le creamos un nuevo registro, le ponemos el nombre, seleccionamos tipo de registro A (para IPv4) y luego en dirigir el tráfico a seleccionamos "Alias de la distribución de CloudFront", ahí nos aparecerá nuestro CloudFront. Le damos a crear registro y con eso será suficiente.
+
+![Imagen](../Recursos/CF/ssl7.png)
+
+!!! warning "¡Importante!"
+    Tuve algunos problemas a la hora de crear el registro, no me salía mi CloudFront a pesar de estar en la región global. El problema era que al crear el registro A yo pensaba que no era necesario que se llamase exactamente igual, pero sí, es totalmente necesario. Así que hay que tenerlo siempre en cuenta, el registro se debe llamar exactamente igual que el CloudFront o ni siquiera aparecerá en la lista desplegable.
+
+Ahora sí que podremos entrar en convenio-docs.data.pre.basetis.com y comprobar que funciona con HTTPS y que tiene un certificado verificado.
+
+![Imagen](../Recursos/CF/cert.png)
+![Imagen](../Recursos/CF/cert1.png)
+
+Listo. Ahora, como extra, si tienes automatizado todo con GitHub actions hay que hacerle un cambio a la pipeline.
+
+[:tools: Actualizar GitHub Actions para tener en cuenta el CloudFront :tools:](GitHubActions.md#extra-actualizar-pipeline-para-cloudfront){ .md-button }
