@@ -27,6 +27,8 @@ nav:
   - Docker:
     - Dockerización de MKdocs: pages/Dockerizacion.md
   - GitHub Actions: pages/GitHubActions.md
+  - Terraform:
+    - VPC con EC2 y Nginx: pages/TerraEC2.md
 
 theme:
   name: material
