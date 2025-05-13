@@ -46,7 +46,7 @@ Ahora que tenemos las instrucciones de ejecución, necesitamos saber la metodolo
 
 ![Imagen](../Recursos/ECS/ECS8.png)
 
-Como ya tenemos el clúster seleccionado, no nos dejará cambiarlo. En la configuración informática, para este caso más simple, vamos a elegir "Tipo de lanzamiento". La estrategia sirve para distribuir las tareas entre varios proveedores, nos puede interesar para evitar que por ejemplo una web se caiga si hay demasiadas visitas al mismo tiempo. Dejamos el resto de opciones por defecto, ya que como sabemos, usamos Fargate.
+Como ya tenemos el clúster seleccionado, no nos dejará cambiarlo. En la configuración informática, para este caso más simple, vamos a elegir "Tipo de lanzamiento". La estrategia sirve para distribuir las tareas entre varios proveedores, nos puede interesar para elegir un determinado spot en caso de que haya demasiada demanda, y que use Fargate On Demand. Dejamos el resto de opciones por defecto.
 
 ![Imagen](../Recursos/ECS/ECS9.png)
 
