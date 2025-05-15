@@ -29,6 +29,7 @@ nav:
   - GitHub Actions: pages/GitHubActions.md
   - Terraform:
     - VPC con EC2 y Nginx: pages/TerraEC2.md
+    - ECS: pages/TerraECS.md
 
 theme:
   name: material
