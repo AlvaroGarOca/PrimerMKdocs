@@ -28,8 +28,10 @@ nav:
     - Dockerización de MKdocs: pages/Dockerizacion.md
   - GitHub Actions: pages/GitHubActions.md
   - Terraform:
-    - VPC con EC2 y Nginx: pages/TerraEC2.md
-    - ECS: pages/TerraECS.md
+    - Práctica 1: pages/TerraEC2.md
+    - Práctica 2: pages/TerraECS.md
+    - Práctica 3: pages/TerraPrac3.md
+    - Práctica 4: pages/TerraPrac4.md
 
 theme:
   name: material
