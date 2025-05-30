@@ -60,7 +60,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Modo día
-      primary: green
+      primary: deep purple
       accent: deep purple
 
     # Light Mode
@@ -68,8 +68,8 @@ theme:
       toggle:
         icon: material/weather-night
         name: Modo noche
-      primary: blue
-      accent: deep orange
+      primary: deep purple
+      accent: deep purple
   
 markdown_extensions:
   - attr_list

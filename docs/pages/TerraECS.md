@@ -183,3 +183,6 @@ Esto es todo lo que hace falta para nuestro ECS. Como ya he dicho antes, recuerd
 
 !!!warning
     **¡Recuerda hacer terraform destroy al acabar!**
+
+### Repositorio
+Podéis encontrar el código completo en mi [GitHub](https://github.com/AlvaroGarOca/ClassRoom-Terraform/tree/main/practica-2)

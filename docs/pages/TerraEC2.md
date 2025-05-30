@@ -228,3 +228,6 @@ Para comprobarlo, directamente vamos a entrar a nuestra EC2 por http a través d
 ![alt text](../Recursos/Others/image.png)
 
 :dancer: ¡Funciona! :dancer:
+
+### Repositorio
+Podéis encontrar la práctica completa en mi [GitHub](https://github.com/AlvaroGarOca/ClassRoom-Terraform/tree/main/practica-1)
