@@ -35,7 +35,8 @@ nav:
 
 theme:
   name: material
-  favicon: Recursos/Other/faviconBasetis.png
+  logo: Recursos/Others/Basetis_Logotipo.svg
+  favicon: Recursos/Others/favicon.ico
   language: es
   icon:
     admonition:
@@ -61,7 +62,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Modo día
-      primary: deep purple
+      primary: custom
       accent: deep purple
 
     # Light Mode
@@ -101,3 +102,6 @@ extra:
   social:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/%C3%A1lvarogarc%C3%ADaoca%C3%B1a/
+
+extra_css:
+  - stylesheets/extra.css
