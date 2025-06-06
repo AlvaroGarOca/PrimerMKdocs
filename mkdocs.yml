@@ -32,6 +32,7 @@ nav:
     - Práctica 2: pages/TerraECS.md
     - Práctica 3: pages/TerraPrac3.md
     - Práctica 4: pages/TerraPrac4.md
+    - Práctica 5: pages/TerraPrac5.md
 
 theme:
   name: material
