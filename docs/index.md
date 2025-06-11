@@ -1,5 +1,5 @@
 # Proyecto de documentación - Álvaro García Ocaña
-Este MKdocs tiene como función documentar y mostrar los pasos que he realizado en la classroom de Onisim, mostrando paso a paso cada función, además de explicar su utilidad y funcionamiento en casos reales. 
+Este MKdocs tiene como función documentar y mostrar los pasos que he realizado en la classroom de Onisim, mostrando paso a paso cada función, además de explicar su utilidad y funcionamiento en casos reales. **Borrar este texto te quita la posibilidad de recibir una patada en la espinilla**
 
 !!! info "Para navegar..."
 
