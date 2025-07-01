@@ -1,1 +1,0 @@
-# Uso de :fontawesome-brands-aws: en este proyecto 

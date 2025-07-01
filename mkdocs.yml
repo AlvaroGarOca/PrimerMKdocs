@@ -2,37 +2,39 @@ site_name: Documentación
 site_url: https://sitename.example
 nav:
   - Inicio: index.md
-  - MKdocs: 
-    - Uso: pages/usoMKdocs.md
-    - Instalación: pages/instalacionMKdocs.md
-  - AWS:
-    - Uso: pages/usoAWS.md
+  - Git y Markdown:
+    - Instalación de MKdocs: pages/instalacionMKdocs.md
+  - AWS - EC2 Despliegue Clásico:
     - VPC:
       - Creación de VPC y subredes: pages/instalacionVPC.md
     - EC2:
       - Creación de EC2: pages/instalacionEC2.md
       - Instalación de Nginx: pages/Nginx.md
       - Nginx en funcionamiento: pages/NginxFuncionamiento.md
-    - ECS:
-      - Creación de ECS: pages/creacionECS.md
-      - Conexión con RDS: pages/conexionecsrds.md
-      - Desplegar Wordpress: pages/desplegarWP.md
-    - RDS:
-      - Creación de RDS: pages/creacionRDS.md
-    - S3:
+  - Contenedores Docker:
+    - Dockerización de MKdocs: pages/Dockerizacion.md
+  - AWS - ECS:
+    - Creación de ECS: pages/creacionECS.md
+  - AWS - ECS con RDS y EFS:
+    - Creación de RDS: pages/creacionRDS.md
+    - Conexión con RDS: pages/conexionecsrds.md
+    - Desplegar Wordpress: pages/desplegarWP.md
+  - AWS y Github - Sitio Web Estático:
       - Página estática en S3: pages/paginaestaticas3.md
       - Cloudfront y ACM: pages/Cloudfront.md
-    - WAF:
-      - Crear una ACL: pages/waf.md
-  - Docker:
-    - Dockerización de MKdocs: pages/Dockerizacion.md
-  - GitHub Actions: pages/GitHubActions.md
+      - WAF:
+        - Crear una ACL: pages/waf.md
+      - GitHub Actions: pages/GitHubActions.md
   - Terraform:
     - Práctica 1: pages/TerraEC2.md
     - Práctica 2: pages/TerraECS.md
     - Práctica 3: pages/TerraPrac3.md
     - Práctica 4: pages/TerraPrac4.md
     - Práctica 5: pages/TerraPrac5.md
+  - Kubernetes:
+    - Nginx básico: pages/Kub1.md
+    - Skaffold: pages/Kub2.md
+    - Kustomization: pages/Kub3.md
 
 theme:
   name: material
