@@ -35,6 +35,8 @@ nav:
     - Nginx básico: pages/Kub1.md
     - Skaffold: pages/Kub2.md
     - Kustomization: pages/Kub3.md
+    - Helm:
+      - Básico: pages/Helm1.md
 
 theme:
   name: material
